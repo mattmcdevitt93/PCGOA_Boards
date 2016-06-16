@@ -1,0 +1,47 @@
+   <div class="post">
+    <div class="post_header">
+      <p class="post_title"><%= @post.post_type %> #<%= @post.id %> |   <%= @post.title %> |<span>By <%= @post.username %></span></p>
+      <p class="post_timestamp"><%= @post.created_at %> - Last updated: <%= @post.updated_at %>
+        <% if current_user.blank? === false %>
+          <% if @post.username === current_user.username %>
+             - <%= link_to 'Edit', edit_post_path(@post) %> -
+            <%= link_to 'Delete', remove_path(@post), method: :delete %>
+          <% end %>
+        <% end %>
+
+      </p>
+    </div>
+    <div class="post_content">
+      <%= @post.content.html_safe %>
+    </div>
+
+    <% if current_user === nil %>
+      <%= render 'nouser' %>
+    <% else %>
+      <%= render 'newcomment' %>
+    <% end %>
+
+    <% @comments.each do |comment| %>
+      <div class="comment">
+        #<%= comment.id %> |
+        #<%= comment.user_id %>-<%= comment.username %> |
+        <% if comment.created_at === comment.updated_at %>
+        Created at: <%= comment.updated_at %>
+        <% else %>
+        <%= content_tag :span, title: comment.created_at do %>* Edited at:<% end %>
+        <span title="Created at: comment.created_at"><%= comment.updated_at %></span>
+        <% end %>
+          <% if current_user.blank? === false %>
+            <% if comment.username === current_user.username %>
+              | <%= link_to 'Edit/Remove', edit_comment_path(comment) %>
+              <!-- | <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+            <% end %>
+          <% end %>
+        <% if comment.comment_type != 'deleted' %>
+        <div class="comment_content"><%= comment.content.html_safe %></div>
+        <% else %>
+        <div class="comment_content comment_deleted">Comment Deleted</div>
+        <% end %>
+      </div>
+    <% end %>
+    </div>

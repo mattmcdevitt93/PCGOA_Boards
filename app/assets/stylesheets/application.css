@@ -1,0 +1,208 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bootstrap
+ */
+
+div {
+	/*border: 1px solid black;*/
+	font-family: inherit;
+}
+
+p {
+	font-family: inherit;
+}
+
+.container-fluid {
+	padding: 0px;
+	/*font-family: 'Audiowide', cursive;*/
+	/*font-family: 'Squada One', cursive;*/
+	/*font-family: 'Open Sans', sans-serif;*/
+}
+
+.content {
+	padding-left: 0px;
+}
+
+.notice {
+	color: #000000;
+	font-size: 14px;
+}
+
+.iframe-google-calendar {
+	margin-left: 25px;
+}
+
+/*Color*/
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	color: #000000;
+	background-color: inherit;
+}
+
+.c_primary {
+	background-color: #4C4CB2;
+}
+
+.c_primary a {
+	color: #ffffff;
+}
+
+/*Borders and Fonts*/
+
+.login {
+	margin-top:15px;
+	/*margin-bottom:15px;*/
+	border-top: 3px solid #4C4CB2;
+	border-right: 3px solid #4C4CB2;
+	border-left: 3px solid #4C4CB2;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.logo {
+	margin-top:15px;
+	margin-bottom:15px;
+	font-size: 25px;
+	font-family: 'Audiowide', cursive;
+}
+
+.nav-bar {
+	padding: 5px;
+	min-height: 30px;
+	font-size: 20px;
+	font-family: 'Audiowide', cursive;
+	/*margin-bottom: 5px;*/
+	color: #ffffff;
+
+}
+
+.nav-link {
+	padding-left: 25px;
+}
+
+.side_bar {
+	border-left: 3px solid #4C4CB2;
+	border-bottom: 3px solid #4C4CB2;
+	border-top: 3px solid #4C4CB2;
+	top: -10px;
+	/*min-width: 200px;*/
+	/*border-radius: 5px;*/
+	/*margin-top: 5px;*/
+	border-radius: 10px 0px 0px 10px;
+
+}
+
+/*INDEX CSS*/
+
+.index_post {
+	padding:10px;
+	border: 3px solid #4C4CB2;
+	margin-bottom: 5px;
+	border-radius: 10px;
+}
+
+.index_content {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/*font-family: 'Open Sans', sans-serif;*/
+	/*font-size: 18px;*/
+	line-height: 110%;
+}
+
+.index_title {
+	font-family: 'Audiowide', cursive;
+	font-size: 16px;
+}
+
+
+/*POST CSS*/
+
+.post_header {
+	border-right: 3px solid #4C4CB2;
+	border-bottom: 3px solid #4C4CB2;
+	border-radius: 0px 0px 10px 0px;
+	padding: 10px;
+	padding-top: 20px;
+	outline-offset: 10px;
+	margin-top: -10px;
+}
+
+.post_title {
+	font-size: 28px;
+	font-family: 'Audiowide', cursive;}
+
+.post_timestamp {
+	font-size: 18px;
+	font-family: 'Audiowide', cursive;}
+
+.post_content {
+	margin-left: 18px;
+}
+
+.post_content {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-size: 18px;
+	line-height: 110%;
+
+}
+
+/*COMMENT CSS*/
+
+.comment {
+	border: 3px solid #4C4CB2;
+	border-radius: 10px;
+	margin-bottom: 15px;
+	padding: 5px;
+	font-size: 14px;
+
+}
+
+.comment_content {
+	font-size: 16px;
+	padding-left: 25px;
+	line-height: 110%;
+
+}
+
+.comment_field {
+	margin-left: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/*TS CSS*/
+
+.TS_Info {
+	margin-top: 10px;
+}
+
+#ts3status {
+	font-size: 12px;
+	min-width: 190px;
+}
+
+#TS_icon {
+	float: left;
+	width: 20px;
+	height: 20px;
+	background-position: -80px 0px;
+	margin-right: 10px;
+	background-image: url(PCGOA_sprite.png);
+}

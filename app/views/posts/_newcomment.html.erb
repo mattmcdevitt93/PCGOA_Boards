@@ -1,0 +1,15 @@
+<div class="comment_field">
+  <%= form_for(@comment) do |f| %>
+    <%= f.hidden_field :post_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :username, value: current_user.username %>
+
+    <p>
+      <%= f.text_area :content, :cols => "50", :rows => "6" %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>

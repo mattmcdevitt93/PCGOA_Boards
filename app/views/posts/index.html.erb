@@ -1,0 +1,27 @@
+<% @posts.each do |post| %>
+  <div class='index_post'>
+    <span class='index_head'>
+      <span class="index_title"><%= link_to post.title, post %></span> | By <%= post.username %> | Posted at: <%= post.created_at %>
+    </span>
+  <br>
+  <div class=''><%= post.content.truncate(350).html_safe %></div>
+  <br>
+  <%= link_to 'Read more', post %>
+    <% if current_user.blank? === false %>
+      <% if current_user.admin === true %>
+      | <%= link_to 'Edit', edit_post_path(post) %>
+      | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= will_paginate @posts %>
+
+
+<% if current_user.blank? === false %>
+  <% if current_user.admin === true %>
+    <%= link_to 'New Post', new_post_path %>
+  <% end %>
+<% end %>
+
