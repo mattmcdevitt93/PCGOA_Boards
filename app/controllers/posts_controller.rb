@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     # @post = Post.find(params[:id])
     @side = true
     if current_user === nil
-      @comment = Comment.new(post_id: @post.id, user_id: "Anaomyous Coward")
+      @comment = Comment.new(post_id: @post.id, user_id: "Anomyous Coward")
     else
       @comment = Comment.new(post_id: @post.id, user_id: current_user.id)
     end
@@ -40,7 +40,6 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -80,10 +79,11 @@ class PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
+      @post.tags = "{" + @post.tags.map(&:inspect).join(', ') + "}"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :post_type, :username, :user_id)
+      params.require(:post).permit(:title, :content, :post_type, :username, :user_id, :tags)
     end
 end

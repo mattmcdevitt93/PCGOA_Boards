@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(version: 20160510131410) do
     t.text     "content"
     t.string   "post_type"
     t.string   "icon"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "tags",       default: [],              array: true
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "users", force: :cascade do |t|

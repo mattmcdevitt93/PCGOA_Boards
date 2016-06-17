@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content
       t.string :post_type
       t.string :icon
+      t.text :tags, array: true, default: []
 
       t.timestamps null: false
     end
