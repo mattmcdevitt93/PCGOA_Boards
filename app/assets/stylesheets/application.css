@@ -24,6 +24,11 @@ p {
 	font-family: inherit;
 }
 
+sub { 
+    font-size: smaller;
+    font-size: 8px;
+}
+
 .container-fluid {
 	padding: 0px;
 	/*font-family: 'Audiowide', cursive;*/
@@ -56,7 +61,7 @@ a:hover {
 }
 
 .c_primary {
-	background-color: #4C4CB2;
+	background-color: #4F4F7F;
 }
 
 .c_primary a {
@@ -68,9 +73,9 @@ a:hover {
 .login {
 	margin-top:15px;
 	/*margin-bottom:15px;*/
-	border-top: 3px solid #4C4CB2;
-	border-right: 3px solid #4C4CB2;
-	border-left: 3px solid #4C4CB2;
+	border-top: 3px solid #4F4F7F;
+	border-right: 3px solid #4F4F7F;
+	border-left: 3px solid #4F4F7F;
 	border-radius: 10px 10px 0px 0px;
 }
 
@@ -88,6 +93,7 @@ a:hover {
 	font-family: 'Audiowide', cursive;
 	/*margin-bottom: 5px;*/
 	color: #ffffff;
+	border-bottom: 10px solid #4C4CB2;
 
 }
 
@@ -138,8 +144,9 @@ a:hover {
 	border-radius: 0px 0px 10px 0px;
 	padding: 10px;
 	padding-top: 20px;
-	outline-offset: 10px;
+	padding-left: 40px;
 	margin-top: -10px;
+	margin-left: -20px;
 }
 
 .post_title {
@@ -157,10 +164,12 @@ a:hover {
 .post_content {
 	padding-top: 5px;
 	padding-bottom: 5px;
+	padding-left: 50px;
+	margin-left: -20px;
 	/*font-family: 'Open Sans', sans-serif;*/
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 110%;
-
+	border-bottom: 10px solid #4C4CB2;
 }
 
 /*COMMENT CSS*/

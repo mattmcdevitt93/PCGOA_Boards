@@ -1,7 +1,7 @@
    <div class="post">
     <div class="post_header">
       <p class="post_title"><%= @post.post_type %> #<%= @post.id %> |   <%= @post.title %> |<span>By <%= @post.username %></span></p>
-      <p class="post_timestamp"><%= @post.created_at %> - Last updated: <%= @post.updated_at %>
+      <p class="post_timestamp">Last updated: <%= @post.updated_at %>
         <% if current_user.blank? === false %>
           <% if @post.username === current_user.username %>
              - <%= link_to 'Edit', edit_post_path(@post) %> -
