@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     @side = true
   end
 
+  def contact
+    @side = true
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show

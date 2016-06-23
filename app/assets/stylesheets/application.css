@@ -49,6 +49,25 @@ sub {
 	margin-left: 25px;
 }
 
+.event_container {
+	border-left: 5px solid #4C4CB2;
+	border-right: 5px solid #4C4CB2;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+
+}
+
+.page_foot {
+	height: 30px;
+/*	font-size: 20px;
+	font-family: 'Audiowide', cursive;
+	color: #ffffff;*/
+	border-top: 10px solid #4C4CB2;
+	background-color: #4F4F7F;
+}
+
 /*Color*/
 
 a {
@@ -214,4 +233,9 @@ a:hover {
 	background-position: -80px 0px;
 	margin-right: 10px;
 	background-image: url(PCGOA_sprite.png);
+}
+
+.light_text {
+	color: grey;
+	font-size: 8px;
 }
