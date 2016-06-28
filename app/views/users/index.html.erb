@@ -1,0 +1,22 @@
+Users Index, Admin only
+
+<% @user.each do |user| %>
+  <div class=''>
+    <%= user.id %> - <%= user.username %> - <%= user.email %> | <%= user.admin %>
+
+    <%= form_for(user) do |f| %>
+
+    <%= f.hidden_field :id, value: user.id %>
+
+
+    <%= f.label :admin %> | 
+    <%= f.check_box :admin %>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+
+  </div>
+<% end %>

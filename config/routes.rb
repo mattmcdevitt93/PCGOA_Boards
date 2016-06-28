@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/create'
+
   resources :comments
   devise_for :users
   resources :posts
+  resources :users
   root 'posts#index'
   delete 'posts/:id' => 'posts#destroy', as: :remove
   get '/event' => 'posts#event'
   get '/contact' => 'posts#contact'
-
-
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.
