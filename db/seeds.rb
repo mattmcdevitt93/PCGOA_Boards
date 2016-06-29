@@ -1,7 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create!([
+  {email: "mcfatboy93@gmail.com", username: "Bahnd", encrypted_password: "$2a$11$6KDoMG0YKCOrWz8IIYlnBO2viVTxvCPk8TamWE28BuCiZB3cqptKS", admin: true, editor: true, reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2016-06-29 16:46:47", last_sign_in_at: "2016-06-29 16:46:47", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
+])
+Post.create!([
+  {title: "Test Post, Please ignore", username: "Bahnd", user_id: 1, content: "Greetings Humans, and welcome to PCGOABoards.\r\n<p></p>\r\nThis site is for updates and discussion from the PC Gaming of Awesome Teamspeak3 server and community.  Feel free to join the Server at Voice.PCGOA.com.  There is no password and all are welcome to use the server for games and discussion, simply ask an existing user to set your server group.  If you have any questions, comments or concerns find one of the admins and they can set things straight.  \r\n<p></p>\r\nAt the moment our community doubles as the voice communication hub for the EvE Online corporation \"Blitzkrieg.\" and we have run organizations in a variety of titles, including Wildstar, World of Tanks and Guild Wars 2.  \r\n<p></p>\r\nAt this point, we currently have a page on Facebook and an XMPP server and I am trying to move the community to a more open and easy to access platform <sub>(also Zuckerberg is evil...)</sub>.  This site is a personal project and will be updated to the best of my crappy programing skills, more tool will be added over time.  I will also be broadcasting updates and there is a utility to monitor the status of the Teamspeak server (Yell at me if it goes down... hopefully I wont be in Iceland this time).  For the moment the Facefriend group will mirror these updates but I would like to have all posts and announcements be hosted here. Anyway...\r\n<p></p>\r\nFly Safe\r\n<p></p>\r\nBahnd Rollard / Matt", post_type: "Article", icon: nil, tags: ["Article", "    Blog", "    Welcome"]}
+])

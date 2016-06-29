@@ -5,12 +5,7 @@ class CommentsController < ApplicationController
 
 
   def index
-    # For testing
-    if current_user.admin === true
       @comments = Comment.all
-    else
-      @comments = nil 
-    end
   end
 
   def create
@@ -52,11 +47,7 @@ class CommentsController < ApplicationController
   end
 
   private
-    def admin_check
-      if current_user.admin === false
-        redirect_to :root
-      end
-    end
+
     def set_comment
       @comment = Comment.find(params[:id])
     end

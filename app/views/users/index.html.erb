@@ -1,22 +1,10 @@
-Users Index, Admin only
+Users Index, Admin only <%= link_to 'comments', comments_path %>
 
 <% @user.each do |user| %>
   <div class=''>
-    <%= user.id %> - <%= user.username %> - <%= user.email %> | <%= user.admin %>
-
-    <%= form_for(user) do |f| %>
-
-    <%= f.hidden_field :id, value: user.id %>
-
-
-    <%= f.label :admin %> | 
-    <%= f.check_box :admin %>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
+    <%= user.id %> - <%= user.username %> - <%= user.email %> |  <%= link_to 'User Profile', user %>
+    
+<%= will_paginate @user %>
 
   </div>
 <% end %>

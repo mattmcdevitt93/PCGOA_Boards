@@ -1,1 +1,39 @@
-User show page
+<h3>User Info</h3>
+
+<table>
+      <tr>
+        <td>ID: </td> <td><%= @user.id %></td>
+      </tr>
+      <tr>
+        <td>Username: </td> <td><%= @user.username %></td>
+      </tr>
+      <tr>
+        <td>Email: </td> <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <td>Editor status? </td> <td><%= @user.editor %></td>
+      </tr>      
+      <tr>
+        <td>Updated at: </td> <td><%= @user.updated_at %></td>
+      </tr>
+      <tr>
+        <td>Created at: </td> <td><%= @user.created_at %></td>
+      </tr>
+</table>
+
+    <%= form_for(@user) do |f| %>
+
+    <%= f.hidden_field :id, value: @user.id %>
+
+
+    <%= f.label :admin %> | 
+    <%= f.check_box :admin %>
+
+
+    <%= f.label :editor %> | 
+    <%= f.check_box :editor %>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+  <% end %>

@@ -8,18 +8,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class='container-fluid'>
-  
-  <div class='logo col-md-8'>
-  <%= link_to 'PCGOABoards', root_path %>
-          <span class="notice pull-right" id="notice">   <%= notice %></span>
+  <div class='container-fluid'>
 
-  </div>
+    <div class='logo col-md-8'>
+      <%= link_to 'PCGOABoards', root_path %>
+      <span class="notice pull-right" id="notice">   <%= notice %></span>
+
+    </div>
 
     <div class="login col-md-3">
       <% if user_signed_in? %>
       <li>
-        Signed in as <%= current_user.username %> | <%= current_user.admin %>
+        Signed in as <%= current_user.username %> | <%= current_user.id %>
       </li>
       <li>
         <%= link_to('Edit Account', edit_user_registration_path) %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -38,19 +38,24 @@
       <span class='nav-link'><%= link_to 'Home', root_path %></span>
       <span class='nav-link'><%= link_to 'Events', event_path %></span>
       <span class='nav-link'><%= link_to 'Contact', contact_path %></span>
+      <% if current_user.blank? === false %>
+        <% if current_user.admin === true %>
+          <span class='nav-link'><%= link_to 'Dashboard', users_path %></span>
+        <% end %>
+      <% end %>
+
     </div>
-<div class='index_content col-md-10'>
+    <div class='index_content col-md-10'>
 
-<%= yield %>
-</div>
-  <% if @side === true %>
+      <%= yield %>
+    </div>
+    <% if @side === true %>
     <%= render 'side_bar' %>
-  <% end %>
-<hr>
-<% request.path %>
-</div>
-<div class='page_foot'>
-
-</div>
+    <% end %>
+    <hr>
+    <% request.path %>
+  </div>
+  <div class='page_foot'>
+  </div>
 </body>
 </html>

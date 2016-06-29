@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160510131410) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "username"
+    t.integer  "user_id"
     t.text     "content"
     t.string   "post_type"
     t.string   "icon"
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160510131410) do
     t.string   "username",               default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.boolean  "admin",                  default: false
+    t.boolean  "editor",                 default: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

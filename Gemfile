@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Heroku Gem
 gem 'rails_12factor'
+gem 'seed_dump'
 
 # gem 'activerecord-jdbcpostgresql-adapter'
 

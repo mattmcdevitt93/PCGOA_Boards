@@ -8,9 +8,11 @@
   <br>
   <%= link_to 'Read more', post %>
     <% if current_user.blank? === false %>
-      <% if current_user.admin === true %>
+      <% if current_user.editor === true %>
+       <% if current_user.id === post.user_id or current_user.admin === true %>
       | <%= link_to 'Edit', edit_post_path(post) %>
       | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       <% end %>
     <% end %>
   </div>
@@ -20,7 +22,7 @@
 
 
 <% if current_user.blank? === false %>
-  <% if current_user.admin === true %>
+  <% if current_user.editor === true %>
     <%= link_to 'New Post', new_post_path %>
   <% end %>
 <% end %>

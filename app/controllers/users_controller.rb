@@ -3,9 +3,13 @@ class UsersController < ApplicationController
 
 
 	def index
-		@user = User.all
+		@user = User.paginate(:page => params[:page], :per_page => 25).order(id: :desc)
 		@side = false
 	end
+
+  def show
+    @user = User.find(params[:id])
+  end
 
 	def update
 		@user = User.find(params[:id])
@@ -33,7 +37,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-      params.require(:user).permit(:id, :admin)
+      params.require(:user).permit(:id, :admin, :editor)
     end
 
 	def admin_check

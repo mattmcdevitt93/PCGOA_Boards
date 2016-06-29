@@ -7,6 +7,18 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
   	devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
-  	devise_parameter_sanitizer.permit(:account_update, keys: [:username, :admin])
+  	devise_parameter_sanitizer.permit(:account_update, keys: [:username, :admin, :editor])
+  end
+
+  def admin_check
+    if current_user.admin === false
+      redirect_to :root
+    end
+  end
+
+  def editor_check
+    if current_user.editor === false
+      redirect_to :root
+    end
   end
 end

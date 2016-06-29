@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:show, :index, :event, :contact]
-  before_action :admin_check, only: [:users, :create, :update, :destroy]
+  before_action :editor_check, only: [:users, :create, :update, :destroy]
 
 
   # GET /posts
@@ -83,11 +83,6 @@ class PostsController < ApplicationController
 
   private
 
-    def admin_check
-      if current_user.admin === false
-        redirect_to :root
-      end
-    end
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
