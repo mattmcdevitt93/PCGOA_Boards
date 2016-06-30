@@ -144,6 +144,7 @@ a:hover {
 .index_content {
 	padding-top: 5px;
 	padding-bottom: 5px;
+	padding-left: 50px;
 	/*font-family: 'Open Sans', sans-serif;*/
 	/*font-size: 18px;*/
 	line-height: 110%;
@@ -152,6 +153,20 @@ a:hover {
 .index_title {
 	font-family: 'Audiowide', cursive;
 	font-size: 16px;
+}
+
+.index_icon {
+	background-color: #333;
+	height: 80px;
+	width: 80px;
+	float: left;
+	margin-left: -25px;
+	margin-right: 10px;
+	/*margin-top: -25px;*/
+	border: 3px solid #4F4F7F;
+	border-radius: 5px;
+	background: url("GH_Image.png");
+	background-size: 74px, 74px;
 }
 
 
