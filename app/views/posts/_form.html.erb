@@ -19,9 +19,13 @@
     <%= f.label :content %><br>
     <%= f.text_area :content, :cols => "100", :rows => "10"  %>
   </div>
-    <div class="field">
+  <div class="field">
     <%= f.label :tags %> - WARNING: Does not sanatize yet, avoid using.<br>
     <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :icon %><br>
+    <%= f.text_field :icon %>
   </div>
   <%= f.hidden_field :post_type, value: "Article" %>
 

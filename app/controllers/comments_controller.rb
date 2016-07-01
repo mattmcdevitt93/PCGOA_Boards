@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
   end
 
   def update
-    if current_user.id === comment.user_id
+    # if current_user.id === comment.user_id
       respond_to do |format|
         if @comment.update(comment_params)
           format.html { redirect_to post_url(@comment.post_id), notice: 'Comment was successfully updated.' }
@@ -33,7 +33,7 @@ class CommentsController < ApplicationController
           format.json { render json: @comment.errors, status: :unprocessable_entity }
         end
       end
-    end
+    # end
   end
 
   # Testing

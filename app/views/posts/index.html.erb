@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
   <div class='index_post'>
     <span class='index_head'>
-      <div class='index_icon' style=''></div>
+      <div class='index_icon'><%= image_tag(post.icon, height: '74', width: '74') %></div>
       <span class="index_title"><%= link_to post.title, post %></span> | By <%= post.username %> | Posted at: <%= post.created_at %>
     </span>
   <br>
