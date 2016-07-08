@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :admin_check, only: [:index, :update, :destroy]
+	before_action :admin_check, only: [:index, :update, :destroy, :show]
 
 
 	def index
@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @user_comments = Comment.where(user_id: @user.id)
   end
 
 	def update

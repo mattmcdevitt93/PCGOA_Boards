@@ -11,7 +11,7 @@
 
   <tbody>
     <% @comments.each do |comment| %>
-      <tr>
+      <tr class='comments_index'>
         <td><%= comment.content %></td>
         <td><%= comment.comment_type %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>

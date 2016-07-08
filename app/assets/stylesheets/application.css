@@ -113,7 +113,6 @@ a:hover {
 	/*margin-bottom: 5px;*/
 	color: #ffffff;
 	border-bottom: 10px solid #4C4CB2;
-
 }
 
 .nav-link {
@@ -129,6 +128,9 @@ a:hover {
 	/*border-radius: 5px;*/
 	/*margin-top: 5px;*/
 	border-radius: 10px 0px 0px 10px;
+	box-shadow: 10px 10px 5px #888888;
+	position: relative;
+	z-index: 10;
 
 }
 
@@ -138,7 +140,9 @@ a:hover {
 	padding:10px;
 	border: 3px solid #4C4CB2;
 	margin-bottom: 5px;
+	margin-top: 20px;
 	border-radius: 10px;
+	box-shadow: 10px 10px 5px #888888;
 }
 
 .index_content {
@@ -227,6 +231,24 @@ a:hover {
 	margin-left: 50px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+/* Dashboard and admin CSS*/
+
+.dashboard_index {
+	padding: 5px;
+	border: 2px solid #444444;
+	margin: 5px;
+
+}
+
+.dashboard_links {
+	margin-top: 5px;
+}
+
+.dashboard_data {
+	border-bottom: 1px solid #444444;
+	padding-bottom: 5px;
 }
 
 /*TS CSS*/
