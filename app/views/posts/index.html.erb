@@ -22,9 +22,5 @@
 <%= will_paginate @posts %>
 
 
-<% if current_user.blank? === false %>
-  <% if current_user.editor === true %>
-    <%= link_to 'New Post', new_post_path %>
-  <% end %>
-<% end %>
+
 

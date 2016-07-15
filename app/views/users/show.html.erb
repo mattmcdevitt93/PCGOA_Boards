@@ -1,3 +1,5 @@
+<div class='dashboard_content'>
+
 <h3>User Info</h3>
 
 <table>
@@ -41,7 +43,14 @@
 <% @user_comments.each do |comment| %>
 <div class='dashboard_index'>
   <div class='dashboard_data'>
-    Id# <%= comment.id %> - <%= comment.user_id %> - <%= comment.content %>
+    Id# <%= comment.id %> - 
+      <% if comment.created_at === comment.updated_at %>
+        Created at: <%= comment.updated_at %>
+        <% else %>
+        <%= content_tag :span, title: comment.created_at do %>* Edited at:<% end %>
+        <span title="Created at: comment.created_at"><%= comment.updated_at %></span>
+        <% end %>
+    - <%= comment.user_id %> - <%= comment.content %>
   </div>
 
   <div class='dashboard_links'>
@@ -49,4 +58,7 @@
   </div>
 </div>
 <% end %>
+  <%= will_paginate @user_comments %>
 
+
+</div>

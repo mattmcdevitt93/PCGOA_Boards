@@ -15,6 +15,11 @@
  *= require bootstrap
  */
 
+body {
+	background-image: url(stardust.png);
+
+}
+
 div {
 	/*border: 1px solid black;*/
 	font-family: inherit;
@@ -31,6 +36,7 @@ sub {
 
 .container-fluid {
 	padding: 0px;
+	width: 100% !important;
 	/*font-family: 'Audiowide', cursive;*/
 	/*font-family: 'Squada One', cursive;*/
 	/*font-family: 'Open Sans', sans-serif;*/
@@ -56,10 +62,11 @@ sub {
 	margin-bottom: -5px;
 	padding-top: 15px;
 	padding-bottom: 10px;
-
+	background-color: #DDD;
 }
 
 .page_foot {
+	margin-top: 15px;
 	height: 30px;
 /*	font-size: 20px;
 	font-family: 'Audiowide', cursive;
@@ -89,8 +96,18 @@ a:hover {
 
 /*Borders and Fonts*/
 
+.header {
+	min-width: 750px;
+}
+
 .login {
-	margin-top:15px;
+	width: 250px;
+	margin-top: 5px;
+	margin-right: 10%;
+	background-color: #DDD;
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
 	/*margin-bottom:15px;*/
 	border-top: 3px solid #4F4F7F;
 	border-right: 3px solid #4F4F7F;
@@ -99,13 +116,34 @@ a:hover {
 }
 
 .logo {
-	margin-top:15px;
-	margin-bottom:15px;
+	left: 0;
+	float: left;
+	margin-top: 5px;
+	padding: 15px;
+	padding-right: 50px;
 	font-size: 25px;
 	font-family: 'Audiowide', cursive;
+	background-color: #DDD;
+	min-width: 170px;
 }
 
-.nav-bar {
+.logo_side {
+	right: 0;
+	margin-top: 5px;
+	float: left;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 48px 0 0 150px;
+	border-color: transparent transparent transparent #dddddd;
+}
+
+.head_buffer {
+	height: 54px;
+	position: relative;
+}
+
+.head-bar {
 	padding: 5px;
 	min-height: 30px;
 	font-size: 20px;
@@ -115,8 +153,9 @@ a:hover {
 	border-bottom: 10px solid #4C4CB2;
 }
 
-.nav-link {
+.head-link {
 	padding-left: 25px;
+	float: left;
 }
 
 .side_bar {
@@ -128,9 +167,11 @@ a:hover {
 	/*border-radius: 5px;*/
 	/*margin-top: 5px;*/
 	border-radius: 10px 0px 0px 10px;
-	box-shadow: 10px 10px 5px #888888;
+	box-shadow: 10px 10px 5px #666;
 	position: relative;
 	z-index: 10;
+	margin-bottom: 25px;
+	background-color: #DDD;
 
 }
 
@@ -142,7 +183,9 @@ a:hover {
 	margin-bottom: 5px;
 	margin-top: 20px;
 	border-radius: 10px;
-	box-shadow: 10px 10px 5px #888888;
+	box-shadow: 10px 10px 5px #666;
+	background-color: #DDD;
+
 }
 
 .index_content {
@@ -152,6 +195,7 @@ a:hover {
 	/*font-family: 'Open Sans', sans-serif;*/
 	/*font-size: 18px;*/
 	line-height: 110%;
+
 }
 
 .index_title {
@@ -234,6 +278,10 @@ a:hover {
 }
 
 /* Dashboard and admin CSS*/
+
+.dashboard_content {
+		background-color: #DDD;
+}
 
 .dashboard_index {
 	padding: 5px;

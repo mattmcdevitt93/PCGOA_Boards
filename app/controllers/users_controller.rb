@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_comments = Comment.where(user_id: @user.id)
+    @user_comments = Comment.where(user_id: @user.id).paginate(:page => params[:page], :per_page => 25).order(created_at: :desc)
   end
 
 	def update

@@ -9,14 +9,18 @@
 </head>
 <body>
   <div class='container-fluid'>
+  <div class='header'>
+    <div class=''>
+      <div class='logo'>
+        <%= link_to 'PCGOABoards', root_path %>
+        <span class="notice pull-right" id="notice">   <%= notice %></span>
 
-    <div class='logo col-md-8'>
-      <%= link_to 'PCGOABoards', root_path %>
-      <span class="notice pull-right" id="notice">   <%= notice %></span>
-
+      </div>
+      <div class='logo_side'></div>
     </div>
 
-    <div class="login col-md-3">
+
+    <div class="login pull-right">
       <% if user_signed_in? %>
       <li>
         Signed in as <%= current_user.username %>
@@ -33,29 +37,36 @@
       </li>
       <% end %>
     </div>
+    <div class='head_buffer'></div>
 
-    <div class='nav-bar col-md-12 c_primary'>
-      <span class='nav-link'><%= link_to 'Home', root_path %></span>
-      <span class='nav-link'><%= link_to 'Events', event_path %></span>
-      <!-- <span class='nav-link'><%= link_to 'Contact', contact_path %></span> -->
+    <div class='head-bar c_primary'>
+      <div class='head-link'><%= link_to 'Home', root_path %></div>
+      <div class='head-link'><%= link_to 'Events', event_path %></div>
+      <!-- <div class='head-link'><%= link_to 'Contact', contact_path %></div> -->
       <% if current_user.blank? === false %>
-        <% if current_user.admin === true %>
-          <span class='nav-link'><%= link_to 'Dashboard', users_path %></span>
-        <% end %>
+      <% if current_user.admin === true %>
+      <div class='head-link'><%= link_to 'Dashboard', users_path %></div>
+      <% end %>
+      <% end %>
+      <% if current_user.blank? === false %>
+      <% if current_user.editor === true %>
+      <div class='head-link'><%= link_to 'New Post', new_post_path %></div>
+      <% end %>
       <% end %>
 
     </div>
-    <div class='index_content col-md-10'>
+  </div>
+  <div class='index_content col-md-10'>
 
-      <%= yield %>
-    </div>
-    <% if @side === true %>
-    <%= render 'side_bar' %>
-    <% end %>
-    <hr>
-    <% request.path %>
+    <%= yield %>
   </div>
-  <div class='page_foot'>
-  </div>
+  <% if @side === true %>
+  <%= render 'side_bar' %>
+  <% end %>
+  <hr>
+  <% request.path %>
+</div>
+<div class='page_foot'>
+</div>
 </body>
 </html>
