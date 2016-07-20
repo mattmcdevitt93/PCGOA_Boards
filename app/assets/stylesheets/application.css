@@ -17,6 +17,7 @@
 
 body {
 	background-image: url(stardust.png);
+	/*background-image: url(congruent_outline.png);*/
 
 }
 
@@ -227,19 +228,30 @@ a:hover {
 	padding-top: 20px;
 	padding-left: 40px;
 	margin-top: -10px;
-	margin-left: -20px;
+	margin-left: -60px;
+	box-shadow: 10px 10px 5px #666;
+	background-color: #DDD;
 }
 
 .post_title {
 	font-size: 28px;
-	font-family: 'Audiowide', cursive;}
+	font-family: 'Audiowide', cursive;
+	line-height: 25px;
+}
+
 
 .post_timestamp {
 	font-size: 18px;
-	font-family: 'Audiowide', cursive;}
+	font-family: 'Audiowide', cursive;
+}
 
 .post_content {
-	margin-left: 18px;
+	margin-top: 5px;
+	padding: 5px;
+	border: 3px solid #4C4CB2;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #666;
+	background-color: #DDD;
 }
 
 .post_content {
