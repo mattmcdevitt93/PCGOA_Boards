@@ -102,14 +102,15 @@ a:hover {
 }
 
 .login {
+	float: right;
 	width: 250px;
 	margin-top: 5px;
 	margin-right: 10%;
+	/*margin-left: 40%;*/
 	background-color: #DDD;
 	padding: 5px;
 	padding-left: 20px;
 	padding-right: 20px;
-	/*margin-bottom:15px;*/
 	border-top: 3px solid #4F4F7F;
 	border-right: 3px solid #4F4F7F;
 	border-left: 3px solid #4F4F7F;
@@ -117,8 +118,8 @@ a:hover {
 }
 
 .logo {
-	left: 0;
-	float: left;
+	display: inline-block;
+	/*float: left;*/
 	margin-top: 5px;
 	padding: 15px;
 	padding-right: 50px;
@@ -129,9 +130,9 @@ a:hover {
 }
 
 .logo_side {
-	right: 0;
-	margin-top: 5px;
-	float: left;
+	display: inline-block;
+	margin-left: -5px;
+	margin-bottom: -15px;
 	width: 0;
 	height: 0;
 	border-style: solid;
