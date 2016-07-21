@@ -16,7 +16,7 @@
  */
 
 body {
-	background-image: url(stardust.png);
+	/*background-image: url(stardust.png);*/
 	/*background-image: url(congruent_outline.png);*/
 
 }
@@ -169,7 +169,7 @@ a:hover {
 	/*border-radius: 5px;*/
 	/*margin-top: 5px;*/
 	border-radius: 10px 0px 0px 10px;
-	box-shadow: 10px 10px 5px #666;
+	box-shadow: 5px 5px 5px #666;
 	position: relative;
 	z-index: 10;
 	margin-bottom: 25px;
@@ -180,12 +180,14 @@ a:hover {
 /*INDEX CSS*/
 
 .index_post {
+	border: 3px solid #bbb;
 	padding:10px;
-	border: 3px solid #4C4CB2;
+	padding-left: 200px;
+	margin-left: -200px;
 	margin-bottom: 5px;
 	margin-top: 20px;
-	border-radius: 10px;
-	box-shadow: 10px 10px 5px #666;
+	/*border-radius: 10px;*/
+	/*box-shadow: 10px 10px 5px #666;*/
 	background-color: #DDD;
 
 }
@@ -230,7 +232,7 @@ a:hover {
 	padding-left: 40px;
 	margin-top: -10px;
 	margin-left: -60px;
-	box-shadow: 10px 10px 5px #666;
+	/*box-shadow: 10px 10px 5px #666;*/
 	background-color: #DDD;
 }
 
@@ -247,23 +249,18 @@ a:hover {
 }
 
 .post_content {
-	margin-top: 5px;
-	padding: 5px;
-	border: 3px solid #4C4CB2;
-	border-radius: 10px;
-	box-shadow: 10px 10px 5px #666;
-	background-color: #DDD;
-}
-
-.post_content {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 50px;
-	margin-left: -20px;
+	padding-left: 200px;
+	margin-top: 5px;
+	margin-left: -200px;
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-size: 14px;
 	line-height: 110%;
-	border-bottom: 10px solid #4C4CB2;
+	border: 3px solid #bbb;
+	/*border-radius: 10px;*/
+	/*box-shadow: 10px 10px 5px #666;*/
+	background-color: #DDD;
 }
 
 /*COMMENT CSS*/
@@ -274,6 +271,7 @@ a:hover {
 	margin-bottom: 15px;
 	padding: 5px;
 	font-size: 14px;
+	background-color: #DDD;
 
 }
 
@@ -285,9 +283,14 @@ a:hover {
 }
 
 .comment_field {
-	margin-left: 50px;
+	margin-top: 10px;
+	margin-left: -50px;
+	padding-left: 50px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background-color: #DDD;
+	border: 3px solid #bbb;
+	width: 500px;
 }
 
 /* Dashboard and admin CSS*/
