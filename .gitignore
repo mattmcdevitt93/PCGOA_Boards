@@ -11,3 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
+/db/migrate/20160721181738_create_polls.rb

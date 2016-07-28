@@ -168,7 +168,7 @@ a:hover {
 	/*border-radius: 5px;*/
 	/*margin-top: 5px;*/
 	border-radius: 10px 0px 0px 10px;
-	box-shadow: 10px 10px 5px #666;
+	box-shadow: 5px 5px 5px #666;
 	position: relative;
 	z-index: 10;
 	margin-bottom: 25px;
@@ -219,50 +219,7 @@ background-color:#DDD
 
 /*POST CSS*/
 
-.post_header {
-	border-right: 3px solid #4C4CB2;
-	border-bottom: 3px solid #4C4CB2;
-	border-radius: 0px 0px 10px 0px;
-	padding: 10px;
-	padding-top: 20px;
-	padding-left: 40px;
-	margin-top: -10px;
-	margin-left: -60px;
-	box-shadow: 10px 10px 5px #666;
-	background-color: #DDD;
-}
 
-.post_title {
-	font-size: 28px;
-	font-family: 'Audiowide', cursive;
-	line-height: 25px;
-}
-
-
-.post_timestamp {
-	font-size: 18px;
-	font-family: 'Audiowide', cursive;
-}
-
-.post_content {
-	margin-top: 5px;
-	padding: 5px;
-	border: 3px solid #4C4CB2;
-	border-radius: 10px;
-	box-shadow: 10px 10px 5px #666;
-	background-color: #DDD;
-}
-
-.post_content {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 50px;
-	margin-left: -20px;
-	/*font-family: 'Open Sans', sans-serif;*/
-	font-size: 14px;
-	line-height: 110%;
-	border-bottom: 10px solid #4C4CB2;
-}
 
 /*COMMENT CSS*/
 
@@ -272,6 +229,7 @@ background-color:#DDD
 	margin-bottom: 15px;
 	padding: 5px;
 	font-size: 14px;
+	background-color: #DDD;
 
 }
 
@@ -283,9 +241,14 @@ background-color:#DDD
 }
 
 .comment_field {
-	margin-left: 50px;
+	margin-top: 10px;
+	margin-left: -50px;
+	padding-left: 50px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background-color: #DDD;
+	border: 3px solid #bbb;
+	width: 500px;
 }
 
 /* Dashboard and admin CSS*/
@@ -333,4 +296,19 @@ background-color:#DDD
 .light_text {
 	color: grey;
 	font-size: 8px;
+}
+
+/* Poll CSS */
+
+#add_question {
+	background-image: url(icon_plus.png);
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	margin-bottom: -3px;
+}
+
+#add_question:hover {
+	background-image: url(icon_plus_i.png);
+
 }

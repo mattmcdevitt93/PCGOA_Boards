@@ -9,12 +9,41 @@
 </head>
 <body>
   <div class='container-fluid'>
+<<<<<<< HEAD
   <div class='header'>
     <div class=''>
       <div class='logo'>
         <%= link_to 'PCGOABoards', root_path %>
         <span class="notice pull-right" id="notice">   <%= notice %></span>
 
+=======
+    <div class='header'>
+    <div class='masthead'>
+        <div class='logo'>
+          <%= link_to 'PCGOABoards', root_path %>
+
+        </div>
+        <div class='logo_side'></div>
+          <span class="notice" id="notice">   <%= notice %></span>
+
+        <div class="login">
+          <% if user_signed_in? %>
+          <li>
+            Signed in as <%= current_user.username %>
+          </li>
+          <li>
+            <%= link_to('Edit Account', edit_user_registration_path) %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to('Login', new_user_session_path)  %>  
+          </li>
+          <li>
+            <%= link_to('Register', new_user_registration_path)  %>
+          </li>
+          <% end %>
+        </div>
+>>>>>>> 08705708918ab077df241655ca8f62038f08478a
       </div>
       <div class='logo_side'></div>
     </div>
@@ -55,6 +84,14 @@
       <% end %>
 
     </div>
+<<<<<<< HEAD
+=======
+    <% if @side === true %>
+    <%= render '/posts/side_bar' %>
+    <% end %>
+    <hr>
+    <% request.path %>
+>>>>>>> 08705708918ab077df241655ca8f62038f08478a
   </div>
   <div class='index_content col-md-10'>
 
