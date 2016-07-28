@@ -13,10 +13,10 @@
     <div class='masthead'>
         <div class='logo'>
           <%= link_to 'PCGOABoards', root_path %>
-          <span class="notice pull-right" id="notice">   <%= notice %></span>
 
         </div>
         <div class='logo_side'></div>
+          <span class="notice" id="notice">   <%= notice %></span>
 
         <div class="login">
           <% if user_signed_in? %>
@@ -63,7 +63,7 @@
       <%= yield %>
     </div>
     <% if @side === true %>
-    <%= render 'side_bar' %>
+    <%= render '/posts/side_bar' %>
     <% end %>
     <hr>
     <% request.path %>

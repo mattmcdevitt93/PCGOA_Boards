@@ -2,10 +2,6 @@
 
 var Module = Module || {};
 
-$(document).ready(function() {
-	console.log('Ready!')
-});
-
 Module.Teamspeak3 = function () {
 
     $.ajax({
