@@ -16,4 +16,4 @@
 //= require_tree .
 //= require bootstrap
 //= require Teamspeak
-//= require poll_assistant
+

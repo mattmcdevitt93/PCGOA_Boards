@@ -9,22 +9,14 @@
 </head>
 <body>
   <div class='container-fluid'>
-<<<<<<< HEAD
-  <div class='header'>
-    <div class=''>
-      <div class='logo'>
-        <%= link_to 'PCGOABoards', root_path %>
-        <span class="notice pull-right" id="notice">   <%= notice %></span>
-
-=======
     <div class='header'>
     <div class='masthead'>
         <div class='logo'>
           <%= link_to 'PCGOABoards', root_path %>
+          <span class="notice pull-right" id="notice">   <%= notice %></span>
 
         </div>
         <div class='logo_side'></div>
-          <span class="notice" id="notice">   <%= notice %></span>
 
         <div class="login">
           <% if user_signed_in? %>
@@ -43,67 +35,40 @@
           </li>
           <% end %>
         </div>
->>>>>>> 08705708918ab077df241655ca8f62038f08478a
       </div>
-      <div class='logo_side'></div>
+
+
+
+      <!-- <div class='head_buffer'></div> -->
+
+      <div class='head-bar c_primary'>
+        <div class='head-link'><%= link_to 'Home', root_path %></div>
+        <div class='head-link'><%= link_to 'Events', event_path %></div>
+        <!-- <div class='head-link'><%= link_to 'Contact', contact_path %></div> -->
+        <% if current_user.blank? === false %>
+        <% if current_user.admin === true %>
+        <div class='head-link'><%= link_to 'Dashboard', users_path %></div>
+        <% end %>
+        <% end %>
+        <% if current_user.blank? === false %>
+        <% if current_user.editor === true %>
+        <div class='head-link'><%= link_to 'New Post', new_post_path %></div>
+        <% end %>
+        <% end %>
+
+      </div>
     </div>
+    <div class='index_content col-md-10'>
 
-
-    <div class="login pull-right">
-      <% if user_signed_in? %>
-      <li>
-        Signed in as <%= current_user.username %>
-      </li>
-      <li>
-        <%= link_to('Edit Account', edit_user_registration_path) %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-      </li>
-      <% else %>
-      <li>
-        <%= link_to('Login', new_user_session_path)  %>  
-      </li>
-      <li>
-        <%= link_to('Register', new_user_registration_path)  %>
-      </li>
-      <% end %>
+      <%= yield %>
     </div>
-    <div class='head_buffer'></div>
-
-    <div class='head-bar c_primary'>
-      <div class='head-link'><%= link_to 'Home', root_path %></div>
-      <div class='head-link'><%= link_to 'Events', event_path %></div>
-      <!-- <div class='head-link'><%= link_to 'Contact', contact_path %></div> -->
-      <% if current_user.blank? === false %>
-      <% if current_user.admin === true %>
-      <div class='head-link'><%= link_to 'Dashboard', users_path %></div>
-      <% end %>
-      <% end %>
-      <% if current_user.blank? === false %>
-      <% if current_user.editor === true %>
-      <div class='head-link'><%= link_to 'New Post', new_post_path %></div>
-      <% end %>
-      <% end %>
-
-    </div>
-<<<<<<< HEAD
-=======
     <% if @side === true %>
-    <%= render '/posts/side_bar' %>
+    <%= render 'side_bar' %>
     <% end %>
     <hr>
     <% request.path %>
->>>>>>> 08705708918ab077df241655ca8f62038f08478a
   </div>
-  <div class='index_content col-md-10'>
-
-    <%= yield %>
+  <div class='page_foot'>
   </div>
-  <% if @side === true %>
-  <%= render 'side_bar' %>
-  <% end %>
-  <hr>
-  <% request.path %>
-</div>
-<div class='page_foot'>
-</div>
 </body>
 </html>

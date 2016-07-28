@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :polls
   get 'users/new'
 
   get 'users/create'
