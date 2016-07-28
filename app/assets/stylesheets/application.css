@@ -16,7 +16,7 @@
  */
 
 body {
-	background-image: url(stardust.png);
+	/*background-image: url(stardust.png);*/
 	/*background-image: url(congruent_outline.png);*/
 
 }
@@ -179,14 +179,13 @@ a:hover {
 /*INDEX CSS*/
 
 .index_post {
-	padding:10px;
-	border: 3px solid #4C4CB2;
-	margin-bottom: 5px;
-	margin-top: 20px;
-	border-radius: 10px;
-	box-shadow: 10px 10px 5px #666;
-	background-color: #DDD;
-
+border:3px solid #bbb;
+padding:10px;
+padding-left:200px;
+margin-left:-200px;
+margin-bottom:5px;
+margin-top:20px;
+background-color:#DDD
 }
 
 .index_content {
