@@ -9,66 +9,64 @@
 </head>
 <body>
   <div class='container-fluid'>
-    <div class='header'>
-    <div class='masthead'>
-        <div class='logo'>
-          <%= link_to 'PCGOABoards', root_path %>
-          <span class="notice pull-right" id="notice">   <%= notice %></span>
-
-        </div>
-        <div class='logo_side'></div>
-
-        <div class="login">
-          <% if user_signed_in? %>
-          <li>
-            Signed in as <%= current_user.username %>
-          </li>
-          <li>
-            <%= link_to('Edit Account', edit_user_registration_path) %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-          </li>
-          <% else %>
-          <li>
-            <%= link_to('Login', new_user_session_path)  %>  
-          </li>
-          <li>
-            <%= link_to('Register', new_user_registration_path)  %>
-          </li>
-          <% end %>
-        </div>
-      </div>
-
-
-
-      <!-- <div class='head_buffer'></div> -->
-
-      <div class='head-bar c_primary'>
-        <div class='head-link'><%= link_to 'Home', root_path %></div>
-        <div class='head-link'><%= link_to 'Events', event_path %></div>
-        <!-- <div class='head-link'><%= link_to 'Contact', contact_path %></div> -->
-        <% if current_user.blank? === false %>
-        <% if current_user.admin === true %>
-        <div class='head-link'><%= link_to 'Dashboard', users_path %></div>
-        <% end %>
-        <% end %>
-        <% if current_user.blank? === false %>
-        <% if current_user.editor === true %>
-        <div class='head-link'><%= link_to 'New Post', new_post_path %></div>
-        <% end %>
-        <% end %>
+  <div class='header'>
+    <div class=''>
+      <div class='logo'>
+        <%= link_to 'PCGOABoards', root_path %>
+        <span class="notice pull-right" id="notice">   <%= notice %></span>
 
       </div>
+      <div class='logo_side'></div>
     </div>
-    <div class='index_content col-md-10'>
 
-      <%= yield %>
+
+    <div class="login pull-right">
+      <% if user_signed_in? %>
+      <li>
+        Signed in as <%= current_user.username %>
+      </li>
+      <li>
+        <%= link_to('Edit Account', edit_user_registration_path) %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to('Login', new_user_session_path)  %>  
+      </li>
+      <li>
+        <%= link_to('Register', new_user_registration_path)  %>
+      </li>
+      <% end %>
     </div>
-    <% if @side === true %>
-    <%= render 'side_bar' %>
-    <% end %>
-    <hr>
-    <% request.path %>
+    <div class='head_buffer'></div>
+
+    <div class='head-bar c_primary'>
+      <div class='head-link'><%= link_to 'Home', root_path %></div>
+      <div class='head-link'><%= link_to 'Events', event_path %></div>
+      <!-- <div class='head-link'><%= link_to 'Contact', contact_path %></div> -->
+      <% if current_user.blank? === false %>
+      <% if current_user.admin === true %>
+      <div class='head-link'><%= link_to 'Dashboard', users_path %></div>
+      <% end %>
+      <% end %>
+      <% if current_user.blank? === false %>
+      <% if current_user.editor === true %>
+      <div class='head-link'><%= link_to 'New Post', new_post_path %></div>
+      <% end %>
+      <% end %>
+
+    </div>
   </div>
-  <div class='page_foot'>
+  <div class='index_content col-md-10'>
+
+    <%= yield %>
   </div>
+  <% if @side === true %>
+  <%= render 'side_bar' %>
+  <% end %>
+  <hr>
+  <% request.path %>
+</div>
+<div class='page_foot'>
+</div>
 </body>
 </html>
